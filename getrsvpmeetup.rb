@@ -11,6 +11,7 @@ config = YAML.load(File.read("getrsvpmeetup.yml"))
 groupurlname = config["groupurlname"]
 apikey = config["apikey"]
 
+RestClient.proxy = ENV["http_proxy"]
 response = RestClient.get "https://api.meetup.com/2/events?key=" +
  apikey + "&group_urlname=" + groupurlname + "&page=1&only=id"
 eventid = JSON.parse(response)["results"][0]["id"]
