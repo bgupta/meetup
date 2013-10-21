@@ -6,7 +6,7 @@ require 'uri'
 require 'rest_client'
 require 'yaml'
 
-config = YAML.load(File.read("getrsvpmeetup.yml"))
+config = YAML.load(File.read(ENV['HOME']+"/.getrsvpmeetup.yml"))
 
 groupurlname = config["groupurlname"]
 apikey = config["apikey"]
