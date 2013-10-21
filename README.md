@@ -10,4 +10,4 @@ Meetup.com API tools
 
 These tools are licensed under GNU General Public License (GPL) version 2 or later.
 
-.getmeetuprsvp.yml - Config file. Should be in $HOME
+.getrsvpmeetup.yml - Config file. Should be in $HOME
