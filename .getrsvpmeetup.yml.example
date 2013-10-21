@@ -1,2 +1,3 @@
 groupurlname:  "meetupurlname"
 apikey: "sampleapikeystring"
+http_proxy: ""
