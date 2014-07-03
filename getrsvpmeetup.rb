@@ -43,9 +43,9 @@ $attendees = Array.new
 end
 
 $attendees.each { |x|
-  puts x["member"]["name"].to_s
-#  puts "MeetupName: " + x["member"]["name"].to_s
-#  puts "Member_ID: " + x["member"]["member_id"].to_s
-#  puts "Answer: " + x["answers"][0].to_s
-#  puts
+#  puts x["member"]["name"].to_s
+  puts "MeetupName: " + x["member"]["name"].to_s
+  puts "Member_ID: " + x["member"]["member_id"].to_s
+  puts "Answer: " + x["answers"][0].to_s
+  puts
 }
