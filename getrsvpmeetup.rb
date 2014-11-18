@@ -51,7 +51,7 @@ $attendees.each { |x|
   puts "MeetupName: " + x["member"]["name"].to_s
   puts "Member_ID: " + x["member"]["member_id"].to_s
   if x.has_key?("answers")
-    then puts "hello" # "Answer: " + x["answers"][0].to_s 
+    then puts "Answer: " + x["answers"][0].to_s 
   end
   puts
 }
