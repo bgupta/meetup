@@ -8,7 +8,11 @@ require 'yaml'
 
 config = YAML.load(File.read(ENV['HOME']+"/.getrsvpmeetup.yml"))
 
-$groupurlname = config["groupurlname"]
+if ARGV.empty? 
+  then $groupurlname = config["groupurlname"]
+  else $groupurlname = ARGV[0]
+end
+
 $apikey = config["apikey"]
 $rpp = 200 # results per page
 
@@ -46,6 +50,8 @@ $attendees.each { |x|
 #  puts x["member"]["name"].to_s
   puts "MeetupName: " + x["member"]["name"].to_s
   puts "Member_ID: " + x["member"]["member_id"].to_s
-  puts "Answer: " + x["answers"][0].to_s
+  if x.has_key?("answers")
+    then puts "hello" # "Answer: " + x["answers"][0].to_s 
+  end
   puts
 }
