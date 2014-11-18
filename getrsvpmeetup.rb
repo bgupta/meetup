@@ -22,7 +22,10 @@ RestClient.proxy = ENV["http_proxy"] if ENV["http_proxy"]
 response = RestClient.get "https://api.meetup.com/2/events?key=" +
  $apikey + "&group_urlname=" + $groupurlname + "&page=1&only=id"
 
-$eventid = JSON.parse(response)["results"][0]["id"]
+if ARGV.size == 2
+  then $eventid = ARGV[1]
+  else $eventid = JSON.parse(response)["results"][0]["id"]
+end
 
 def get_page(offset)
   page = RestClient.get "https://api.meetup.com/2/rsvps?key=" +
