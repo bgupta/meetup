@@ -55,20 +55,6 @@ $attendees = []
   $attendees = $attendees + JSON.parse(response)["results"]
 end
 
-def isarealname (x)
-  if x["member"]["name"] == x["answers"][0]
-    then 
-      isreal = true
-  else if x["answers"][0].empty?
-    then
-      isreal = true
-  else
-    puts JSON.pretty_generate(x['member']['member_id'].to_s => { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => x['answers'][0].to_s })
-  end
-  return isreal
-end
-end
-
 $attendeehash = {}
 
 $attendees.each { |x|
