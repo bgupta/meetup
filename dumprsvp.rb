@@ -61,9 +61,10 @@ $attendees.each { |x|
   k = x['member']['member_id'].to_s
   if $memberhash.has_key?(k) and $memberhash[k]['Status'] != 'Suspect'
     then
-      $attendeehash[k] = { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => $memberhash[k]['RealName'].to_s }
-      $attendeehash[k]['LastName'] = $attendeehash[k]['RealName'].split.last.to_str
-      $attendeehash[k]['FirstName'] = $attendeehash[k]['RealName'].gsub($attendeehash[k]['LastName'],'').rstrip
+      $attendeehash[k] = $memberhash[k]
+#      $attendeehash[k] = { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => $memberhash[k]['RealName'].to_s }
+#      $attendeehash[k]['LastName'] = $attendeehash[k]['RealName'].split.last.to_str
+#      $attendeehash[k]['FirstName'] = $attendeehash[k]['RealName'].gsub($attendeehash[k]['LastName'],'').rstrip
   end
 }
 
