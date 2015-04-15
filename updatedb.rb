@@ -74,6 +74,7 @@ def isarealname (x)
 #puts "They don't match, and they answered the RSVP question"
 #puts x["member"]["name"].to_json
   else #puts x["answers"][0].to_json
+    # uncomment to print the mismatches
     puts JSON.pretty_generate(x['member']['member_id'].to_s => { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => x['answers'][0].to_s })
   end
   return isreal
@@ -94,3 +95,4 @@ $attendees.each { |x|
 File.open(datafile, 'w') do |file|
   file.write JSON.pretty_generate($memberhash)
 end
+#puts JSON.pretty_generate($memberhash)

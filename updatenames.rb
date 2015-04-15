@@ -15,7 +15,8 @@ if File.file?(datafile)
 else $memberhash = {}
 end
 
-cleanednamesfile = ENV['HOME'] + '/Downloads/nylug-out.json'
+#cleanednamesfile = ENV['HOME'] + '/Downloads/nylug-out.json'
+cleanednamesfile = ENV['HOME'] + '/Downloads/nylug-rsvp-april15-1-clean.json'
 
 if File.file?(cleanednamesfile)
   then $nameshash = JSON.load(File.read(cleanednamesfile))
