@@ -1,3 +1,4 @@
 groupurlname:  "meetupurlname"
 apikey: "sampleapikeystring"
+datafile: "~/.getrsvpmeetup.json"
 http_proxy: ""

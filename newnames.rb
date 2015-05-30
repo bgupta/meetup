@@ -8,13 +8,6 @@ require 'yaml'
 
 config = YAML.load(File.read(ENV['HOME'] + '/.getrsvpmeetup.yml'))
 
-datafile = ENV['HOME'] + '/.getrsvpmeetup.json'
-
-if File.file?(datafile)
-  then $memberhash = JSON.load(File.read(datafile))
-else $memberhash = {}
-end
-
 orignamesfile = ARGV[0]
 newnamesfile = ARGV[1]
 

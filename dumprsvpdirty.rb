@@ -15,10 +15,10 @@ end
 
 $apikey = config['apikey']
 $rpp = 200 # results per page
-datafile = ENV['HOME'] + '/.getrsvpmeetup.json'
+$datafile = File.expand_path(config['datafile'])
 
-if File.file?(datafile)
-  then $memberhash = JSON.load(File.read(datafile))
+if File.file?($datafile)
+  then $memberhash = JSON.load(File.read($datafile))
 else $memberhash = {}
 end
 
