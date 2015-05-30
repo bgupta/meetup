@@ -15,6 +15,8 @@ Tools for managing real names via RSVP questions.
 + newnames.rb - Compares two JSON RSVP lists, and prints the names in the second file that weren't in the first. JSON output.
 + updatenames.rb - Not ready for use.
 
+Misc:
+
 + LICENSE - GPLv2 text
 + README.md - This file
 
