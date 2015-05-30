@@ -22,8 +22,8 @@ Misc:
 
 These tools are licensed under GNU General Public License (GPL) version 2 or later.
 
-.getrsvpmeetup.yml - Config file. Should be in $HOME
-Groupurlname:  "meetupgroup-name"
-apikey: "67984326174386286492164832"
-http_proxy: ""
-datafile: "~/.getrsvpmeetup.json"
+.getrsvpmeetup.yml - Config file. Should be in $HOME  
+Groupurlname:  "meetupgroup-name"  
+apikey: "67984326174386286492164832"  
+http_proxy: ""  
+datafile: "~/.getrsvpmeetup.json"  
