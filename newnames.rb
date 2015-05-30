@@ -17,9 +17,14 @@ end
 
 #cleanednamesfile = ENV['HOME'] + '/Downloads/nylug-out.json'
 #orignamesfile = ENV['HOME'] + 'nylug-rsvp-april15-1.json'
-orignamesfile = 'nylug-rsvp-april15-1.json'
+#orignamesfile = 'nylug-rsvp-april15-1.json'
+#orignamesfile = 'NYLUGMay14RSVP.json'
+orignamesfile = ARGV[0]
+
 #newnamesfile = ENV['HOME'] + 'nylug-rsvp-april15-3.json'
-newnamesfile = 'nylug-rsvp-april15-3.json'
+#newnamesfile = 'nylug-rsvp-april15-3.json'
+#newnamesfile = 'NYLUGMay14RSVP-2.json'
+newnamesfile = ARGV[1]
 
 if File.file?(orignamesfile)
   then $orignameshash = JSON.load(File.read(orignamesfile))
