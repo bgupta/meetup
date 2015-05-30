@@ -7,6 +7,7 @@ Meetup.com API tools
 + .getrsvpmeetup.yml.sample - Non working example yml config file
 + LICENSE - GPLv2 text
 + README.md - This file
++ dumprsvpdirty.rb - Lists RSVPed persons that are flagged suspect or don't have a FirstName field.
 
 These tools are licensed under GNU General Public License (GPL) version 2 or later.
 
