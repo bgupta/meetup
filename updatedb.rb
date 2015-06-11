@@ -75,7 +75,7 @@ def isarealname (x)
 #puts x["member"]["name"].to_json
   else #puts x["answers"][0].to_json
     # uncomment to print the mismatches
-    puts JSON.pretty_generate(x['member']['member_id'].to_s => { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => x['answers'][0].to_s })
+#    puts JSON.pretty_generate(x['member']['member_id'].to_s => { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => x['answers'][0].to_s })
   end
   return isreal
 end
@@ -86,8 +86,16 @@ $attendees.each { |x|
   unless $memberhash.has_key?(k)
     then 
       if isarealname(x)
-        then $memberhash[k] = { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => x['member']['name'].to_s }
-      end
+        then 
+          $memberhash[k] = { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => x['member']['name'].to_s }
+#      $attendeehash[k] = { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => $memberhash[k]['RealName'].to_s }
+          $memberhash[k]['LastName'] = $memberhash[k]['RealName'].split.last.to_str
+          $memberhash[k]['FirstName'] = $memberhash[k]['RealName'].gsub($memberhash[k]['LastName'],'').rstrip
+        else
+          $memberhash[k] = { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => x['member']['name'].to_s }
+          $memberhash[k]['LastName'] = $memberhash[k]['RealName'].split.last.to_str
+          $memberhash[k]['FirstName'] = $memberhash[k]['RealName'].gsub($memberhash[k]['LastName'],'').rstrip
+        end
 #    else puts x['member']['member_id'].to_s
   end
 }
