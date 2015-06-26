@@ -89,12 +89,12 @@ $attendees.each { |x|
         then 
           $memberhash[k] = { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => x['member']['name'].to_s }
 #      $attendeehash[k] = { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => $memberhash[k]['RealName'].to_s }
-          $memberhash[k]['FirstName'] = $memberhash[k]['RealName'].gsub($memberhash[k]['LastName'],'').rstrip
           $memberhash[k]['LastName'] = $memberhash[k]['RealName'].split.last.to_str
+          $memberhash[k]['FirstName'] = $memberhash[k]['RealName'].gsub($memberhash[k]['LastName'],'').rstrip
         else
           $memberhash[k] = { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => x['member']['name'].to_s, 'NameAnswer' => x['answers'][0].to_s }
-          $memberhash[k]['FirstName'] = $memberhash[k]['RealName'].gsub($memberhash[k]['LastName'],'').rstrip
           $memberhash[k]['LastName'] = $memberhash[k]['RealName'].split.last.to_str
+          $memberhash[k]['FirstName'] = $memberhash[k]['RealName'].gsub($memberhash[k]['LastName'],'').rstrip
           ##puts x['member']['member_id'].to_s
         end
   end
