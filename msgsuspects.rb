@@ -86,7 +86,7 @@ $attendees.each { |x|
     then if $memberhash[k]['Status'] == 'Suspect'
       then 
         url = "http://www.meetup.com/members/" + k + "/"
-        `xdg-open #{url}`
+        puts `echo xdg-open #{url}`
 #      then puts $memberhash[k]['RealName']
     end 
 #      if isarealname(x)
