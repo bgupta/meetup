@@ -84,7 +84,8 @@ $attendees.each { |x|
   k = x['member']['member_id'].to_s
   if $memberhash.has_key?(k)
     then if $memberhash[k]['Status'] == 'Suspect'
-      then puts $memberhash[k]['RealName']
+      then puts $memberhash[k]['RealName'].to_s + "\t\t\t " + $memberhash[k]['Member_ID'].to_s + "\t " + "Name:___________________________________________".to_s
+#      then printf("%-10s %10s",$memberhash[k]['RealName'].to_s,  $memberhash[k]['Member_ID'].to_s,  "Name:_____________________________________________________".to_s)
     end 
 #      if isarealname(x)
 #        then $memberhash[k] = { 'MeetupName' => x['member']['name'].to_s, 'Member_ID' => x['member']['member_id'].to_s, 'RealName' => x['member']['name'].to_s }

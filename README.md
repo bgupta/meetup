@@ -12,6 +12,7 @@ Tools for managing real names via RSVP questions.
 + dumprsvp.rb - Full JSON dump of all attendees. Name information pulled from local datastore if it exists. Uses same config file and arguments as getrsvpmeetup.rb.
 + dumprsvpdirty.rb - JSON lists of RSVPed persons that are flagged suspect or don't have a FirstName field. Uses same config file and arguments as getrsvpmeetup.rb.
 + dumpsuspects.rb - Simple list of RSVPed persons who are flagged suspect in the datastore. Uses same config file and arguments as getrsvpmeetup.rb.
++ msgsuspects.rb - Will open browser tabs on all suspects for a given meeting, to make messaging them easier (to ask for real names)
 + newnames.rb - Compares two JSON RSVP lists, and prints the names in the second file that weren't in the first. JSON output.
 + updatenames.rb - Not ready for use.
 
