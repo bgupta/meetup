@@ -3,6 +3,8 @@ meetup
 
 Meetup.com API tools
 
+Note: This code has been tested with Ruby 1.9.3.
+
 + getrsvpmeetup.rb - Prints an RSVP list for the "next meeting" for a given Meetup group. Reads API key and groupurlname from yml config file. Optional arguments: $1 == groupurlname, which can override config. $2 == meetingid, which overrides default of "next meeting". Will print answer to a single RSVP question if it exists.
 + .getrsvpmeetup.yml.sample - Non working example yml config file
 
