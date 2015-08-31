@@ -68,4 +68,6 @@ $attendees.each { |x|
   end
 }
 
-puts JSON.pretty_generate($attendeehash.sort_by { |k, v| v[:RealName]})
+puts JSON.pretty_generate($attendeehash)
+#puts JSON.pretty_generate($attendeehash.sort_by { |k, v| v[:RealName]})
+
