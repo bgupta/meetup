@@ -4,8 +4,6 @@ require 'rubygems'
 require 'json'
 require 'yaml'
 
-config = YAML.load(File.read(ENV['HOME'] + '/.getrsvpmeetup.yml'))
-
 orignamesfile = ARGV[0]
 newnamesfile = ARGV[1]
 

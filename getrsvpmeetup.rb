@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
-load "./lib/shared.rb"
+require_relative "lib/shared"
 
-$apikey = config["apikey"]
+$apikey = $config["apikey"]
 $rpp = 200 # results per page
 
-RestClient.proxy = config["http_proxy"] if config["http_proxy"]
+RestClient.proxy = $config["http_proxy"] if $config["http_proxy"]
 RestClient.proxy = ENV["http_proxy"] if ENV["http_proxy"]
 
 response = RestClient.get "https://api.meetup.com/2/events?key=" +
