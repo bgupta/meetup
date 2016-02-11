@@ -2,11 +2,6 @@
 
 load "./lib/shared.rb"
 
-if ARGV.empty?
-  then $groupurlname = config['groupurlname']
-else $groupurlname = ARGV[0]
-end
-
 $apikey = config['apikey']
 $rpp = 200 # results per page
 $datafile = File.expand_path(config['datafile'])

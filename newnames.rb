@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
 
-load "./lib/shared.rb"
+require 'rubygems'
+require 'json'
+require 'yaml'
+
+config = YAML.load(File.read(ENV['HOME'] + '/.getrsvpmeetup.yml'))
 
 orignamesfile = ARGV[0]
 newnamesfile = ARGV[1]

@@ -16,7 +16,7 @@ Tools for managing real names via RSVP questions.
 + dumpsuspects.rb - Simple list of RSVPed persons who are flagged suspect in the datastore. Uses same config file and arguments as getrsvpmeetup.rb.
 + msgsuspects.rb - Will open browser tabs on all suspects for a given meeting, to make messaging them easier (to ask for real names)
 + newnames.rb - Compares two JSON RSVP lists, and prints the names in the second file that weren't in the first. JSON output.
-+ updatenames.rb - Not ready for use.
++ updatenames.rb - Not ready for use. Generate updated diff name lists from an older RSVP list.
 
 Misc:
 

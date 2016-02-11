@@ -1,6 +1,12 @@
 #!/usr/bin/env ruby
 
-load "./lib/shared.rb"
+require 'rubygems'
+require 'json'
+require 'uri'
+require 'rest_client'
+require 'yaml'
+
+config = YAML.load(File.read(ENV['HOME'] + '/.getrsvpmeetup.yml'))
 
 $datafile = File.expand_path(config['datafile'])
 
