@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 load "./lib/shared.rb"
+load "./lib/jsondb.rb"
 
 def isarealname (x)
   if x["member"]["name"] == x["answers"][0]
